@@ -3,6 +3,9 @@ uuid = "8fb14b19-e392-4db5-b9fb-6b45c4a6cc9e"
 authors = ["tsutsui <shoppa99.nanone@hotmail.co.jp> and contributors"]
 version = "0.1.0"
 
+[deps]
+SparseArrays = "2f01184e-e22b-5df5-ae63-d93ebab69eaf"
+
 [compat]
 julia = "1"
 

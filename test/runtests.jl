@@ -1,6 +1,5 @@
 using QuantumSpin
 using Test
 
-@testset "QuantumSpin.jl" begin
-    # Write your tests here.
-end
+
+include("test_pauli_matrices.jl")
