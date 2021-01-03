@@ -18,4 +18,5 @@ makedocs(;
 
 deploydocs(;
     repo="github.com/Shoichiro-Tsutsui/QuantumSpin.jl",
+    devbranch = "main"
 )
