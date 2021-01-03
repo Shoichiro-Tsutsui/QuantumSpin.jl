@@ -1,4 +1,24 @@
 """
+    set_spins(N, index::Int, σ::SparseMatrixCSC)
+
+Return a list of Pauli matrices.
+
+# Examples
+```julia-repl
+julia> set_spins(3, 2, σᶻ) == [σ⁰, σᶻ, σ⁰]
+true
+
+```
+"""
+function set_spins(N, index::Int, σ::SparseMatrixCSC)
+    index = pbc(index, N)
+    list_mats = fill(σ⁰, N)
+    list_mats[index] = σ
+    return list_mats
+end
+
+
+"""
     set_spins(N, siteindeces::Vector{Int}, σs)
 
 Return a list of Pauli matrices.

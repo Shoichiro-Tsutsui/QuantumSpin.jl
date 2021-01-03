@@ -12,4 +12,7 @@ module QuantumSpin
     export set_spins
     include("set_spins.jl")
 
+    export on_site_term
+    export spin_spin_interaction_term
+    include("operators.jl")
 end
