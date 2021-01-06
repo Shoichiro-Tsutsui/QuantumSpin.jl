@@ -10,4 +10,4 @@ This is a package for numerical simulations of quantum spin systems.
 
 - Compute Heisenberg hamiltonian with external field on an arbitrary lattice.
 
-Tutroial Jupyter notebook is available on [Binder](https://mybinder.org/v2/gh/Shoichiro-Tsutsui/QuantumSpin.jl/HEAD?filepath=jupyter%2Ftutorial.ipynb).
+Tutorial Jupyter notebook is available on [Binder](https://mybinder.org/v2/gh/Shoichiro-Tsutsui/QuantumSpin.jl/HEAD?filepath=jupyter%2Ftutorial.ipynb).
