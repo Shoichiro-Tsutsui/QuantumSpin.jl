@@ -1,4 +1,4 @@
-@testset "site index" begin
+@testset "periodic boundary condition" begin
     @test pbc(0, 3) == 3
     @test pbc(1, 3) == 1
     @test pbc(2, 3) == 2

@@ -50,6 +50,7 @@
     Ising2d += Diagonal([1,-1,1,-1, -1,1,-1,1, 1,-1,1,-1, -1,1,-1,1])
     Ising2d += Diagonal([1,1,-1,-1, 1,1,-1,-1, -1,-1,1,1, -1,-1,1,1])
     @test spin_spin_interaction_term(A, σᶻ) == sparse(Ising2d)
+    @test spin_spin_interaction_term(A, σᶻ) == hamiltonian(zeros(4,4), zeros(4,4), A, zeros(4), zeros(4), zeros(4))
 
     # Assertion
     A = [

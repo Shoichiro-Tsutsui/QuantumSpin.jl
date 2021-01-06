@@ -55,3 +55,7 @@ julia> pbc(-7:7, 3)
 function pbc(indeces::UnitRange{Int}, N)
     [pbc(i, N) for i in indeces]
 end
+
+
+function lattice()
+end
