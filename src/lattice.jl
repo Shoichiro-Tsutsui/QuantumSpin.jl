@@ -11,6 +11,20 @@ Admissible values for `s` are:
 | :------------------------|:---------------------------------|
 | :chain                   | A one dimensional chain.         |
 | :square                  | A two dimensional square lattice.|
+
+# Examples
+```julia-repl
+julia> lattice(:chain, 3)
+[0 1 1
+ 1 0 1
+ 1 1 0]
+
+julia> lattice(:square, 4, ispbc=false)
+[0 1 1 0
+ 1 0 0 1
+ 1 0 0 1
+ 0 1 1 0]
+```
 """
 function lattice(s::Symbol, N::Int; ispbc=true)
     graphmap = Dict(
@@ -28,7 +42,15 @@ end
 """
     chain_graph(N, ispbc)
 
-An adjacency matrix for a chain graph with length ``N``.
+An adjacency matrix of a chain graph with length ``N``.
+
+# Examples
+```julia-repl
+julia> chain_graph(3)
+[0 1 1
+ 1 0 1
+ 1 1 0]
+```
 """
 function chain_graph(N, ispbc)
     @assert N > 0 "N must be larger than 1."
@@ -47,7 +69,16 @@ end
 """
     issquare(N)
 
-Check whether the number is Perfect Square or not.
+Check whether the number is perfect square or not.
+
+# Examples
+```julia-repl
+julia> issquare(2)
+false
+
+julia> issquare(4)
+true
+```
 """
 function issquare(N)
     isqrt(N)^2 == N
@@ -57,7 +88,22 @@ end
 """
     square_graph(N, ispbc)
 
-An adjacency matrix for a square lattice whose number of vertices is ``N``.
+An adjacency matrix of a square lattice whose number of vertices is ``N``.
+
+# Examples
+```julia-repl
+julia> square_graph(4)
+[0 2 2 0
+ 2 0 0 2
+ 2 0 0 2
+ 0 2 2 0]
+
+julia> square_graph(4, ispbc=false)
+[0 1 1 0
+ 1 0 0 1
+ 1 0 0 1
+ 0 1 1 0]
+```
 """
 function square_graph(N, ispbc)
     @assert N > 0 "N must be larger than 1."

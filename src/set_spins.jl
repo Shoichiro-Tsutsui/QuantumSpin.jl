@@ -7,7 +7,6 @@ Return a list of Pauli matrices.
 ```julia-repl
 julia> set_spins(3, 2, σᶻ) == [σ⁰, σᶻ, σ⁰]
 true
-
 ```
 """
 function set_spins(N, index::Int, σ::SparseMatrixCSC)

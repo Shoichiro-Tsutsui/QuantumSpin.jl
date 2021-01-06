@@ -58,6 +58,6 @@
      1  0  0  1
      1  0  0  1
      1  1  1  0
-    ]
+    ] # non-symmetrix matrix
     @test_throws AssertionError spin_spin_interaction_term(A, σᶻ)
 end
