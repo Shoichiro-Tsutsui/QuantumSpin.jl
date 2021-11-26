@@ -2,7 +2,7 @@ using LinearAlgebra
 using QuantumSpin
 
 @doc raw"""
-    spin_spin_interaction_term(A, σ)
+    on_site_term(h, σ)
 
 Compute a spin-spin interaction term:
 
